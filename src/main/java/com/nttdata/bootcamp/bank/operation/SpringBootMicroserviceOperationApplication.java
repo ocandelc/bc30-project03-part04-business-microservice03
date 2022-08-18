@@ -1,7 +1,7 @@
 package com.nttdata.bootcamp.bank.operation;
 
-import com.nttdata.bootcamp.bank.operation.model.dao.inte.PassiveOperationDaoInte;
-import com.nttdata.bootcamp.bank.operation.model.document.PassiveOperation;
+import com.nttdata.bootcamp.bank.operation.model.dao.inte.OperationPassiveDaoInte;
+import com.nttdata.bootcamp.bank.operation.model.document.OperationPassive;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,20 +18,14 @@ public class SpringBootMicroserviceOperationApplication implements CommandLineRu
     private static final Logger log = LoggerFactory.getLogger(SpringBootMicroserviceOperationApplication.class);
 
     @Autowired
-    private PassiveOperationDaoInte dao;
+    private OperationPassiveDaoInte dao;
     public static void main(String[] args) {
         SpringApplication.run(SpringBootMicroserviceOperationApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("Init PassiveOperation");
-        // code to fix database and generate sample data
-        Flux.just(
-                new PassiveOperation("1","credito empresarial", "credito", "1", new Date(), 0.0,0.0, 0.0, 0.0, "1","1", "1")
-                )
-                .flatMap(c -> dao.save(c))
-                .subscribe(c -> log.info("Insert: " + c.getId() + " " + c.getName()));
+        log.info("Init OperationPassive");
 
     }
 

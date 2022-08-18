@@ -10,7 +10,6 @@ public class Location {
     private String state;
     private String codeLocationType;
     private String codeUbigeo;
-    private String codeEmployee;
 
     public String getId() {
         return id;
@@ -68,11 +67,4 @@ public class Location {
         this.codeUbigeo = codeUbigeo;
     }
 
-    public String getCodeEmployee() {
-        return codeEmployee;
-    }
-
-    public void setCodeEmployee(String codeEmployee) {
-        this.codeEmployee = codeEmployee;
-    }
 }

@@ -9,12 +9,12 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-@Document(collection="passive_operation")
-public class PassiveOperation {
+@Document(collection="operation_passive")
+public class OperationPassive {
 
     @Id
     private String id;
-    private String codePassiveOperation;
+    private String codeOperationPassive;
     private String name;
     private String description;
     private Date operationDate;
@@ -24,6 +24,5 @@ public class PassiveOperation {
     private Double balanceNew;
     private String state;
     private String codeOperationType;
-    private String codeLocation;
 
 }
