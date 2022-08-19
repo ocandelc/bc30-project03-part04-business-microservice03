@@ -46,10 +46,17 @@ public class OperationPassiveServiceImpl implements OperationPassiveServiceInte 
     @Override
     public Mono<OperationPassive> create(final OperationPassive operationPassive) {
 
-        return operationPassiveDaoInte.save(operationPassive)
-                .doFirst(() -> log.info("Begin create OperationPassive"))
-                .doOnNext(a -> log.info(a.toString()))
-                .doAfterTerminate(() -> log.info("Finish create OperationPassive"));
+        String parameterRuleHaveCommission = "1";
+        String parameterRuleHaveMaximumLimit = "1";
+
+        if (("1".equals(parameterRuleHaveCommission)) && ("1".equals(parameterRuleHaveMaximumLimit))) {
+            return operationPassiveDaoInte.save(operationPassive)
+                    .doFirst(() -> log.info("Begin create OperationPassive"))
+                    .doOnNext(a -> log.info(a.toString()))
+                    .doAfterTerminate(() -> log.info("Finish create OperationPassive"));
+        } else {
+            return Mono.empty();
+        }
     }
 
     @Override

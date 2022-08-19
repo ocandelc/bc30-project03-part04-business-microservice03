@@ -35,11 +35,13 @@ public class OperationPassive {
     private String name;
     private String description;
     private Date operationDate;
+    private Double principalBalance;
     private Double balanceCurrent;
     private Double balanceMove;
     private Double balanceCommission;
     private Double balanceNew;
     private String state;
+    private String codeProduct;
     private String codeOperationType;
 
 }

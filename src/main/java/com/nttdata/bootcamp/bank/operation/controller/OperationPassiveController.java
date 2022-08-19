@@ -36,7 +36,7 @@ public class OperationPassiveController {
     @Autowired
     private OperationPassiveServiceInte operationPassiveServiceInte;
 
-    @PostMapping("create")
+    @PostMapping
     public Mono<OperationPassive> create(@RequestBody final OperationPassive operationPassive) {
         log.debug("Begin RestController create OperationPassive");
         return operationPassiveServiceInte.create(operationPassive);
@@ -59,13 +59,13 @@ public class OperationPassiveController {
         return Mono.just("El endpoint readByCodeLocation del api bc30-project03-part04-business-microservice04 (Location)  no está respondiendo. Por favor, comunicarse al teléfono 444-0000 y anexo 1234 con el equipo de soporte de sistemas del Departamento de Tecnología de Información.");
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("{id}")
     public Mono<OperationPassive> updateById(@RequestBody final OperationPassive operationPassive, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById OperationPassive");
         return operationPassiveServiceInte.updateById(id, operationPassive);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById OperationPassive");
         return operationPassiveServiceInte.deleteById(id);
