@@ -1,3 +1,17 @@
+/**
+ * Resumen.
+ * Objeto                   : OperationPassiveController.java
+ * Descripción              : Clase de controladora para invocar los métodos con rest api.
+ * Fecha de Creación        : 04/08/2022.
+ * Proyecto de Creación     : Bootcamp-01.
+ * Autor                    : Oscar Candela.
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Modificaciones
+ * Motivo                   Fecha             Nombre                  Descripción
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-01              05/08/2022        Mario Vásquez           Realizar la creación de un método nuevo.
+ */
+
 package com.nttdata.bootcamp.bank.operation.controller;
 
 import com.nttdata.bootcamp.bank.operation.model.document.OperationPassive;
@@ -10,6 +24,9 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase de controladora para invocar los métodos con rest api.
+ */
 @RestController
 @RequestMapping("/api/operationPassive")
 public class OperationPassiveController {
@@ -50,7 +67,7 @@ public class OperationPassiveController {
 
     @DeleteMapping("delete/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
-        log.debug("Begin RestController deleteById PassiveOperation");
+        log.debug("Begin RestController deleteById OperationPassive");
         return operationPassiveServiceInte.deleteById(id);
     }
 

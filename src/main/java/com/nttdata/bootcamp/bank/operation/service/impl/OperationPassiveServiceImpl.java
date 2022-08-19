@@ -1,3 +1,17 @@
+/**
+ * Resumen.
+ * Objeto                   : OperationPassiveServiceInte.java
+ * Descripción              : Clase de implementación de servicio para utilizar los métodos de CRUD.
+ * Fecha de Creación        : 04/08/2022.
+ * Proyecto de Creación     : Bootcamp-30.
+ * Autor                    : Oscar Candela.
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Modificaciones
+ * Motivo                   Fecha             Nombre                  Descripción
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              05/08/2022        Oscar Candela           Realizar la creación de un método nuevo.
+ */
+
 package com.nttdata.bootcamp.bank.operation.service.impl;
 
 import com.nttdata.bootcamp.bank.operation.model.dao.inte.OperationPassiveDaoInte;
@@ -12,6 +26,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+/**
+ * Clase de implementación de servicio para utilizar los métodos de CRUD.
+ */
 @Service
 public class OperationPassiveServiceImpl implements OperationPassiveServiceInte {
 

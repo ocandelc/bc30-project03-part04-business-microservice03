@@ -1,5 +1,22 @@
+/**
+ * Resumen.
+ * Objeto                   : Location.java
+ * Descripción              : Clase de tipo webclient para obtener y establecer datos desde otro microservicio.
+ * Fecha de Creación        : 04/08/2022.
+ * Proyecto de Creación     : Bootcamp-30.
+ * Autor                    : Oscar Candela.
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Modificaciones
+ * Motivo                   Fecha             Nombre                  Descripción
+ * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              17/08/2022        Mario Vásquez           Realizar la creación de un campo nuevo.
+ */
+
 package com.nttdata.bootcamp.bank.operation.model.webclient;
 
+/**
+ * Clase de tipo webclient para obtener y establecer datos desde otro microservicio.
+ */
 public class Location {
 
     private String id;
