@@ -30,7 +30,7 @@ import reactor.core.publisher.Mono;
  */
 @RestController
 @RequestMapping("/api/operationPassive")
-public class OperationPassiveController {
+public class OperationPassiveRestController {
 
     private static final Logger log = LoggerFactory.getLogger(OperationPassiveServiceInte.class);
 
