@@ -25,8 +25,8 @@ public class OperationPassiveRestControllerTest {
     public void readAllTest() throws Exception {
 
         ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/api/operationPassive").toString(), String.class);
-        String x = response.getStatusCode().toString();
-        assertEquals("200 OK", x);
+        String statusCode = response.getStatusCode().toString();
+        assertEquals("200 OK", statusCode);
 
     }
 
