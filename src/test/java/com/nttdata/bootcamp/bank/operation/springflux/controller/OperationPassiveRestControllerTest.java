@@ -15,16 +15,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class OperationPassiveRestControllerTest {
 
-    @LocalServerPort
-    private int port;
-
     @Autowired
     private TestRestTemplate restTemplate;
 
     @Test
     public void readAllTest() throws Exception {
 
-        ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/api/operationPassive").toString(), String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + "8093" + "/api/operationPassive").toString(), String.class);
         String statusCode = response.getStatusCode().toString();
         assertEquals("200 OK", statusCode);
 
