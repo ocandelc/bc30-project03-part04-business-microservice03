@@ -22,7 +22,7 @@ public class OperationPassiveRestControllerTest {
 
         ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + "8093" + "/api/operationPassive").toString(), String.class);
         String statusCode = response.getStatusCode().toString();
-        assertFalse("200 OK".equals(statusCode));
+        assertFalse(!("200 OK").equals(statusCode));
 
     }
 
