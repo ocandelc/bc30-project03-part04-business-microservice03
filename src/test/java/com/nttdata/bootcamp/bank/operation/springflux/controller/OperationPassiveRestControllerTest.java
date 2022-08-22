@@ -35,7 +35,7 @@ public class OperationPassiveRestControllerTest {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody()
-                .consumeWith(response ->  assertFalse(("200 OK").equals(response.getStatus().toString())));
+                .consumeWith(response ->  assertFalse(!("200 OK").equals(response.getStatus().toString())));
 
     }
 
